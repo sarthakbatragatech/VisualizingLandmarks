@@ -3,7 +3,7 @@ import folium
 # Import pandas : https://pandas.pydata.org/pandas-docs/stable/index.html
 import pandas as pd
 
-print(dir(folium))
+# print(dir(folium))
 
 data = pd.read_csv('Dataset.csv').fillna(value = 0)
 # [819 rows x 36 columns]
@@ -40,5 +40,21 @@ for name, lat, long, elev, vei in zip(data['Name'], data['Latitude'], data['Long
 # for lat, long in zip(data['Latitude'], data['Longitude']):
    # folium.Marker(location=[lat, long]).add_to(m)
 
-print()
 print(m.save('map.html'))
+
+# from ipywidgets import interact
+
+# # Cloudmade Mapbox needs an API key, Mapbox Control Room is limited to a few levels
+# tiles = [name.strip() for name in """
+#     OpenStreetMap
+#     Mapbox Bright
+#     Mapbox Control Room
+#     Stamen Terrain
+#     Stamen Toner
+#     Stamen Watercolor
+#     CartoDB positron
+#     CartoDB dark_matter""".strip().split('\n')]
+
+# @interact(lat=(-90., 90.), lon=(-180., 180.), tiles=tiles, zoom=(1, 18))
+# def create_map(lat=52.518611, lon=13.408333, tiles="Stamen Toner", zoom=10):
+#     return folium.Map(location=(lat, lon), tiles=tiles, zoom_start=zoom)
