@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<div id="app">
+{% block header %}
+  <div class="header">
+      <h1>Volcano Visualization</h1>
+        <h4 id="tagline">Would you like to explore explosive Volcanoes?</h4>
+      <div id="info">
+          <p>Click on any volcano to get details!</p>
+      </div>
+  </div>
+{% endblock %}
+
+  {% block content %}
+      <form method="post">
+          <label for="gender">Looking for a ...</label>
+        <select id='volcano_type' name='volcano_type' value="{{ request.form['volcano_type'] }}">
+          <option value="None">Don't Care</option>
+
+          <br>
+          <label for="VEI">What explosivity index?</label>
+          <input id="VEI" type="VEI" name="VEI" value="{{ request.form['VEI'] }}">
+        <input type="submit" value="Search">
+      </form>
+  {% endblock %}
+
+ 
+  {% include 'map.html' %}
+  
+</div>
