@@ -4,19 +4,14 @@
 
 .header h1 {
     margin: auto;
-    max-width: 40%;
+    max-width: 25%;
     border-bottom: 3px solid red;
     text-align: center;
-}
-
-.header h4 {
-    padding-top: 10px;
-    margin: auto;
-    max-width: 40%;
-    text-align: center;
+    padding-bottom: 5px;
 }
 
 #info {
+    padding-top: 10px;
     margin: auto;
     max-width: 40%;
     text-align: center;
@@ -27,4 +22,8 @@ form {
     max-width: 75%;
     text-align: center;
     padding: 10px;
+}
+
+#VEI {
+    width: 50px;
 }

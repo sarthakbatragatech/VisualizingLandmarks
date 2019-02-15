@@ -27,7 +27,7 @@ def create_map():
     # def create_map(lat=52.518611, lon=13.408333, tiles="Stamen Toner", zoom=10):
     #     return folium.Map(location=(lat, lon), tiles=tiles, zoom_start=zoom)
 
-    m = folium.Map(location=location, zoom_start=2, tiles='Stamen Terrain')
+    m = folium.Map(location=location, zoom_start=3, tiles='Stamen Terrain')
     # m.add_child(folium.LatLngPopup())
 
 

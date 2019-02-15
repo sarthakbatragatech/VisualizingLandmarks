@@ -3,7 +3,6 @@
 {% block header %}
   <div class="header">
       <h1>Visualizing Volcanoes</h1>
-        <h4 id="tagline">Would you like to explore explosive Volcanoes?</h4>
       <div id="info">
           <p>Click on any volcano to get details!</p>
       </div>
@@ -14,7 +13,7 @@
       <form method="post">
           <label for="volcano_type">Looking for a ...</label>
         <select id='volcano_type' name='volcano_type' value="{{ request.form['volcano_type'] }}">
-          <option value="None">Don't Care</option>
+          <option value="None">Strato Volcano</option>
         </select>
 
           <br>
